@@ -23,7 +23,6 @@ class Sentence_similarity():
         elif error_words==False: return feature_vec
 
     def sentence_similarity(self, sentence_1, sentence_2):
-        # 今回使うWord2Vecのモデルは300次元の特徴ベクトルで生成されているので、feature_dimension
         sentence_1_avg_vector = self.avg_feature_vector(sentence=sentence_1)
         sentence_2_avg_vector = self.avg_feature_vector(sentence=sentence_2)
         # １からベクトル間の距離を引いてあげることで、コサイン類似度を計算
